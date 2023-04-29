@@ -1,0 +1,60 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-success fw-bold">Edite Contact</p>
+            <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Minus, harum beatae nemo esse, repudiandae expedita quaerat magni id similique
+                  ipsum voluptate corrupti, numquam libero deserunt mollitia consequuntur
+                   accusantium vel quae?
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="errors!=null">
+    <div class="row">
+        <div class="col">
+            <p class="h text-danger fw-bold">{{errors}}</p>
+        </div>
+    </div>
+</div>
+{{contact | json}}
+<div class="container">
+    <div class="row" *ngIf="isEmpty()">
+        <div class="col-sm-4">
+            <form (submit)="hundleEdite()">
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.name" name="name" type="text" class="form-control" placeholder="Name" [value]="contact.name">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.photo" name="photo" type="text" class="form-control" placeholder="Photo Url" [value]="contact.photo">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.email" name="email" type="email" class="form-control" placeholder="Email" [value]="contact.email">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.mobile" name="mobile" type="number" class="form-control" placeholder="Mobile" [value]="contact.mobile">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.company" name="company" type="text" class="form-control" placeholder="Company" [value]="contact.company">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.title" name="title" type="text" class="form-control" placeholder="Title" [value]="contact.title">
+                </div>
+                <div class="mb-2">
+                    <select class="form-control" [(ngModel)]="contact.groupId" name="groupId">
+                        <option [value]="group.id">{{group.name}}</option>
+                        <option *ngFor="let group of groups" [value]="group.id">{{group.name}}</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <input type="submit" class="btn btn-success" value="Update">
+                    <a routerLink="/contact/admin" class=" btn btn-dark fw-bold ms-2">Close</a>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="col-sm-2"></div> -->
+        <div class="col-sm-4">
+            <img src="../../../assets/285655_user_icon.png" alt="avatar" class="contact-image">
+        </div>
+    </div>
+</div>

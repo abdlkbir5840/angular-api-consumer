@@ -1,0 +1,46 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-success"> Veiw Contact</p>
+            <p class="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Fugit qui numquam labore molestiae, doloremque maiores vero dolores minus,
+                  deleniti quidem quo tenetur ipsam hic provident obcaecati inventore perferendis
+                   accusamus vel!
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container mt-3" *ngIf="louding">
+    <app-spinner></app-spinner>
+</div>
+<div class="container" *ngIf="!louding && errors!=null">
+    <div class="row">
+        <div class="col">
+            <p class="h text-danger fw-bold">{{errors}}</p>
+        </div>
+    </div>
+</div>
+<div class="container mt-4" *ngIf="!louding && isEmpty">
+    <div class="row">
+        <div class="row d-flex align-items-center">
+            <div class="col-sm-4 ">
+                <img [src]="conatct.photo" alt="avatar" class="contact-image-big">
+            </div>
+            <div class="col-sm-6">
+                <ul class="list-group shadow-lg">
+                    <li class="list-group-item list-group-item-danger">Name: <span class="fw-bold">{{conatct.name}}</span></li>
+                    <li class="list-group-item list-group-item-danger">Email: <span class="fw-bold">{{conatct.email}}</span></li>
+                    <li class="list-group-item list-group-item-danger">Mobile: <span class="fw-bold">{{conatct.mobile}}</span></li>
+                    <li class="list-group-item list-group-item-danger">Campany: <span class="fw-bold">{{conatct.company}}</span></li>
+                    <li class="list-group-item list-group-item-danger">Title: <span class="fw-bold">{{conatct.title}}</span></li>
+                    <li class="list-group-item list-group-item-danger">Group Name: <span class="fw-bold">{{group.name}}</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a routerLink="/contact/admin" class="btn btn-success mt-3"><i class="fa fa-arrow-circle-left"></i> Back</a>
+        </div>
+    </div>
+</div>

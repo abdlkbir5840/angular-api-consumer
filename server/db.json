@@ -1,0 +1,48 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Abdelkabir",
+      "email": "abdelkabir@gmail.com",
+      "mobile": "0612345678",
+      "photo": "../../../assets/285655_user_icon.png",
+      "company": "capgemini",
+      "title": "Manager",
+      "groupId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Youssef",
+      "email": "youssef@gmail.com",
+      "mobile": "0698765432",
+      "photo": "../../../assets/285655_user_icon.png",
+      "company": "capgemini",
+      "title": "Developer",
+      "groupId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Rachide",
+      "email": "rachide@gmail.com",
+      "mobile": "0676549810",
+      "photo": "../../../assets/285655_user_icon.png",
+      "company": "capgemini",
+      "title": "Developer",
+      "groupId": "3"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Informatique"
+    },
+    {
+      "id": "2",
+      "name": "Mecanique"
+    },
+    {
+      "id": "3",
+      "name": "Electronique"
+    }
+  ]
+}
